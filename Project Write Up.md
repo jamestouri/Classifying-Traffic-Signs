@@ -32,31 +32,32 @@ Analyze the softmax probabilities of the new images
 ### Layer Architecture:
 
 Layer | Description
-Input | 32 32 1
-Convolutional 3x3 | Output 30x30x10
-Relu |
-Convolutional 3x3 | Output 28x28x100
-Relu |
-Max Pool | Output 14x14x100
-Convolutional 5x5 | Output 10x10x150
-Relu |
-Max Pool | Output 5x5x150
-Convolutional 2x2 | Output 4x4x250
-Relu |
-Max Pool | Output 2x2x250
-Relu |
-Convolutional 2x2 | Output 1x1x1000
-Relu|
-Fully Connected | Output 500
-Relu |
-Fully Connected | Output 300
-Relu|
-Fully Connected | Output 120
-Relu | 
-Fully Connected | Output 84
-Relu |
-Full Connected | Output 43
-Softmax_Cross_Entropy |
+| ------------- |:-------------:|
+|Input | 32 32 1|
+|Convolutional 3x3 | Output 30x30x10|
+|Relu |         |
+|Convolutional 3x3 | Output 28x28x100|
+|Relu |           |
+|Max Pool | Output 14x14x100|
+|Convolutional 5x5 | Output 10x10x150|
+|Relu |         |
+|Max Pool | Output 5x5x150|
+|Convolutional 2x2 | Output 4x4x250|
+|Relu |         |
+|Max Pool | Output 2x2x250|
+|Relu |         |
+|Convolutional 2x2 | Output 1x1x1000|
+|Relu|        |
+|Fully Connected | Output 500|
+|Relu |       |
+|Fully Connected | Output 300|
+|Relu|      |
+|Fully Connected | Output 120|
+|Relu |       |
+|Fully Connected | Output 84|
+|Relu |     |
+|Full Connected | Output 43|
+|Softmax_Cross_Entropy |    |
 
 
 #### 5. I got a 100% confidence in each of the choices for the photos.  This is something I realized I needed to work on:  Data visualizing, took a lot of blog posts and stack overflow to help me even on the most blantaly obvious answers.
