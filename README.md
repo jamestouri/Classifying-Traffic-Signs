@@ -1,4 +1,4 @@
-## Project: Build a Traffic Sign Recognition Program
+## Project: Build a Traffic Sign Recognition Program (Write Up Below)
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 Overview
@@ -15,40 +15,51 @@ To meet specifications, the project will require submitting three files:
 * the code exported as an html file
 * a writeup report either as a markdown or pdf file 
 
-Creating a Great Writeup
----
-A great writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/481/view) as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
+# Summary of Project
 
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
+#### 1. The first thing to do was preprocess the images.  Other than the suggestion of normalizing it with formula (X_train - 128) / 128, I grayscaled it into 1 layer
 
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
+#### 2. From there I built out my LaNet Architecture to see how it works.  Training scores and Validation scores were just all right. I didn't change any of the Training Data, Validation Data, or Test Data sizes
 
-The Project
----
-The goals / steps of this project are the following:
-* Load the data set
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+#### 3. I wasn't really going anywhere with just the preprocessing and the CNN, so I did research and came across a bunch of tensorflow methods to help with augmenting the data. From there as you can see I randomized the data according to the number given while training the data set. 
+#### After setting the EPOCHS to 40 and Batch Size a little down to 120, I started seeing better results.  I also changed the learning rate from .00001 to .0001.
 
-### Dependencies
-This lab requires:
 
-* [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
+#### 4. After the longest time of getting the validation accuracy to a solid score, I tested the data and got a 93.5% 
 
-The lab environment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
+#### Final scores: Training Accuracy (N/A) Validation Accuracy (93.2%) Testing Accuracy (93.5%)
 
-### Dataset and Repository
+### Layer Architecture:
 
-1. Download the data set. The classroom has a link to the data set in the "Project Instructions" content. This is a pickled dataset in which we've already resized the images to 32x32. It contains a training, validation and test set.
-2. Clone the project, which contains the Ipython notebook and the writeup template.
-```sh
-git clone https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project
-cd CarND-Traffic-Sign-Classifier-Project
-jupyter notebook Traffic_Sign_Classifier.ipynb
-```
+Layer | Description
+| ------------- |:-------------:|
+|Input | 32 32 1|
+|Convolutional 3x3 | Output 30x30x10|
+|Relu |         |
+|Convolutional 3x3 | Output 28x28x100|
+|Relu |           |
+|Max Pool | Output 14x14x100|
+|Convolutional 5x5 | Output 10x10x150|
+|Relu |         |
+|Max Pool | Output 5x5x150|
+|Convolutional 2x2 | Output 4x4x250|
+|Relu |         |
+|Max Pool | Output 2x2x250|
+|Relu |         |
+|Convolutional 2x2 | Output 1x1x1000|
+|Relu|        |
+|Fully Connected | Output 500|
+|Relu |       |
+|Fully Connected | Output 300|
+|Relu|      |
+|Fully Connected | Output 120|
+|Relu |       |
+|Fully Connected | Output 84|
+|Relu |     |
+|Full Connected | Output 43|
+|Softmax_Cross_Entropy |    |
 
-### Requirements for Submission
-Follow the instructions in the `Traffic_Sign_Classifier.ipynb` notebook and write the project report using the writeup template as a guide, `writeup_template.md`. Submit the project code and writeup document.
+
+#### 5. I got a 100% confidence in each of the choices for the photos.  This is something I realized I needed to work on:  Data visualizing, took a lot of blog posts and stack overflow to help me even on the most blantaly obvious answers.
+
+### Overall, great experience 
