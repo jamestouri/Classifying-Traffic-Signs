@@ -17,6 +17,10 @@ Dataset | Size
 
 #### Visual of the Training Data Set
 
+![](trainingdataset.png)
+
+
+![](bar_graph.png)
 
 #### Preprocessing the Data
 The first thing to do was preprocess the images.  Other than the suggestion of normalizing it with formula (X_train - 128) / 128, I grayscaled it into 1 layer. I never would have thought use the formula but we want to have the data at a 0 and equal variance, and one our little tips from the project guidelines helped with this.  I took it a step further and grayscaled the images to get rid of the RGB layers.
@@ -51,6 +55,7 @@ I started the architecture from the LaNet lab and added more layers there.  The 
 * I experimented by adding an extra layer at a time 
 * I chose a CNN because it is great for image recognition
 * I decided first what I wanted my Output layer to be, and then I chose my weights according to that, not vice versa.
+* According to what I read, Relu is a great function for activation because it also speeds up the training, while providing a solution of non-linearity.
 
 ### Layer Architecture:
 
@@ -85,7 +90,7 @@ Layer | Description
 
 ### Testing Internet Images
 
-Here is an example of the images and what the model predicted.  I converted the images to Grayscale and normalized it because a that was the way I trained my data so I concluded it would be the best way to recognize the image. 
+Here is an example of the images and what the model predicted.  I converted the images to Grayscale and normalized it because a that was the way I trained my data so I concluded it would be the best way to recognize the image. I chose 3 pictures from wikipedia and then 2 of them from Google images, which is why those 2 are so large. 
 
 ![](Internet-Signs/image_6.png)
 
@@ -100,6 +105,6 @@ Here is an example of the images and what the model predicted.  I converted the 
 ![](Internet-Signs/image_5.png)
 
 
-#### . I got a 100% confidence in each of the choices for the photos.  The visualization is something I realized I needed to work on:  Data visualizing, took a lot of blog posts and stack overflow to help me even on the most blantaly obvious answers.
+#### . I got a 100% confidence in each of the choices for the photos.  
 
-### Overall, great experience 
+#### Overall, great experience.  The biggest improvements is learning to use the Matplot Library better, or at least data visualization.  I used stack overlow a ton just to understand how to plot side by side graphs and the histogram in the beginning.  Medium.com blog posts were huge help too. 
