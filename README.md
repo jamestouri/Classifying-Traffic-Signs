@@ -85,7 +85,7 @@ Layer | Description
 
 ### Testing Internet Images
 
-Here is an example of the images before and after grayscaling it.  I converted the images to Grayscale and normalized it because a that was the way I trained my data so I concluded it would be the best way to recognize the image. 
+Here is an example of the images and what the model predicted.  I converted the images to Grayscale and normalized it because a that was the way I trained my data so I concluded it would be the best way to recognize the image. 
 
 ![](Internet-Signs/image_6.png)
 
@@ -100,6 +100,6 @@ Here is an example of the images before and after grayscaling it.  I converted t
 ![](Internet-Signs/image_5.png)
 
 
-#### . I got a 100% confidence in each of the choices for the photos.  This is something I realized I needed to work on:  Data visualizing, took a lot of blog posts and stack overflow to help me even on the most blantaly obvious answers.
+#### . I got a 100% confidence in each of the choices for the photos.  The visualization is something I realized I needed to work on:  Data visualizing, took a lot of blog posts and stack overflow to help me even on the most blantaly obvious answers.
 
 ### Overall, great experience 
