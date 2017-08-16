@@ -27,7 +27,7 @@ The first thing to do was preprocess the images.  Other than the suggestion of n
 
 Here is an example the before and after of an image in the data set after preprocessing it.
 
-![](normal.png)
+![](regular.png)
 ![](preprocess.png)
 
 #### Augmenting the Images
